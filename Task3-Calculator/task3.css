@@ -1,0 +1,148 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  transition: background 0.5s;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin-bottom: 15px;
+}
+
+.theme-toggle button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.theme-toggle button:hover {
+  background: #444;
+}
+
+/* Calculator container */
+.calculator {
+  width: 340px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: background 0.5s;
+}
+
+/* Display screen */
+#display {
+  width: 100%;
+  height: 70px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: right;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  background: #000;
+  color: #39ff14;  /* Neon green */
+  font-family: 'Digital-7 Mono', monospace;
+  text-shadow: 0 0 8px #39ff14, 0 0 15px #39ff14;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Default buttons */
+.btn {
+  height: 65px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #ecf0f1;
+  color: #2c3e50;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #dfe6e9;
+}
+
+/* Special buttons */
+.operator {
+  background: #ff9800;
+  color: #fff;
+}
+
+.operator:hover {
+  background: #e68900;
+}
+
+.clear {
+  background: #f44336;
+  color: #fff;
+}
+
+.clear:hover {
+  background: #d32f2f;
+}
+
+.del {
+  background: #9c27b0;
+  color: #fff;
+}
+
+.del:hover {
+  background: #7b1fa2;
+}
+
+.equal {
+  grid-row: span 2;
+  background: #4caf50;
+  color: #fff;
+}
+
+.equal:hover {
+  background: #388e3c;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+/* Dark mode */
+body.dark {
+  background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+}
+
+body.dark .calculator {
+  background: #2c2c2c;
+}
+
+body.dark .btn {
+  background: #444;
+  color: #fff;
+}
+
+body.dark .btn:hover {
+  background: #555;
+}
+
+body.dark #display {
+  background: #000;
+  color: #39ff14;
+}
